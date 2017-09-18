@@ -23,7 +23,6 @@ var todoList = {
     },
     // method to change certain todoText on todos object
     changeTodo: function(position, todoText){
-        //this.todos[position] = todoText;
         this.todos[position].todoText = todoText;
         this.displayTodos();
     },
@@ -31,8 +30,18 @@ var todoList = {
     deleteTodo: function(position){
         this.todos.splice(position, 1);
         this.displayTodos();
+    },
+    // method to toggle completed from false to true
+    toggleCompleted: function(position){
+        var todo = this.todos[position];
+        todo.completed = !todo.completed;
+        this.displayTodos();
     }
 };
+todoList.addTodo('boolean testing1');
+
+
+
 
 
 
