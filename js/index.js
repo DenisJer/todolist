@@ -1,6 +1,6 @@
-// it should  store todos array on object
-// it should have a displayTodos method
-// it should have a addTodo method
+// it should  store todos array on object +
+// it should have a displayTodos method+
+// it should have a addTodo method+
 // it should have a changeTodo method
 // it should have a deleteTodo method
 
@@ -8,13 +8,18 @@
 // v2
 
 var todoList = {
-    todos: []
+    todos: [],
+    // method to display todo items in this object
+    displayTodos: function(){
+        console.log(this.todos);
+    },
+    addTodo: function(newTodo){
+        this.todos.push(newTodo);
+        this.displayTodos();
+    }
 };
 
-// function to display todos
-function displayTodos(){
-    console.log('My todos: ', todos);
-}
+
 // function to add new todo item
 function addTodo(newTodo){
     todos.push(newTodo);
