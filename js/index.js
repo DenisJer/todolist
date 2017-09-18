@@ -11,11 +11,20 @@ var todoList = {
     todos: [],
     // method to display todo items in this object
     displayTodos: function(){
-        
-            for(i = 0; i < this.todos.length; i++){
-                console.log(this.todos[i].todoText +'  '+ this.todos[i].completed);
+        // check if todo list is empty
+        if(this.todos.length === 0 || this.todos === undefined){
+            console.log('Your todo list is empty');
+        }else{
+             // looping all todos
+             for(i = 0; i < this.todos.length; i++){
+                 // check if todo is completed
+                if(this.todos[i].completed === true){
+                    console.log("(x)", this.todos[i].todoText);
+                }else{
+                    console.log("()", this.todos[i].todoText);
+                }
             }
-        
+        }
           
     },
     // method to add new todo as an object
