@@ -1,6 +1,6 @@
 // v3
 
-// todoList.addTodo should add objects
+// todoList.addTodo should add objects+
 // todoList.changeTodo should change the todoText property
 // todoList.toggleCompleted dhould change the completed property
 
@@ -21,9 +21,10 @@ var todoList = {
         });
         this.displayTodos();
     },
-    // method to change certain todo item on object
-    changeTodo: function(position, newValue){
-        this.todos[position] = newValue;
+    // method to change certain todoText on todos object
+    changeTodo: function(position, todoText){
+        //this.todos[position] = todoText;
+        this.todos[position].todoText = todoText;
         this.displayTodos();
     },
     // method to delete todo item on this object
@@ -32,7 +33,6 @@ var todoList = {
         this.displayTodos();
     }
 };
-todoList.addTodo('this is an object');
 
 
 
