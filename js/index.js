@@ -1,5 +1,5 @@
 // it should have a function store todos
-// it should have a function display todos
+// it should have a function display todos +
 // it should have a function add todos
 // it should have a function delete todos
 // it should have a function edit todos
@@ -12,4 +12,9 @@ var todos = [];
 function displayTodos(){
     console.log('My todos: ', todos);
 }
+
+function addTodo(newTodo){
+    todos.push(newTodo);
+}
 displayTodos();
+addTodo('new todo');
