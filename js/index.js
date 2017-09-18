@@ -1,8 +1,8 @@
 // v3
 
-// todoList.addTodo should add objects+
-// todoList.changeTodo should change the todoText property
-// todoList.toggleCompleted dhould change the completed property
+// .displayTodos should show .todoText
+// .displayTodos should tell if .todos is empty
+// .displayTodos should show .completed
 
 
 
@@ -11,7 +11,12 @@ var todoList = {
     todos: [],
     // method to display todo items in this object
     displayTodos: function(){
-        console.log(this.todos);
+        
+            for(i = 0; i < this.todos.length; i++){
+                console.log(this.todos[i].todoText +'  '+ this.todos[i].completed);
+            }
+        
+          
     },
     // method to add new todo as an object
     addTodo: function(todoText){
@@ -38,7 +43,8 @@ var todoList = {
         this.displayTodos();
     }
 };
-todoList.addTodo('boolean testing1');
+
+
 
 
 
