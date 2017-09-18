@@ -1,4 +1,4 @@
-// it should have a function store todos array on object
+// it should  store todos array on object
 // it should have a displayTodos method
 // it should have a addTodo method
 // it should have a changeTodo method
