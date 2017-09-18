@@ -7,7 +7,9 @@
 
 // v2
 
-var todos = [];
+var todoList = {
+    todos: []
+};
 
 // function to display todos
 function displayTodos(){
