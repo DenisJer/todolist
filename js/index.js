@@ -18,22 +18,19 @@ var todoList = {
         this.todos.push(newTodo);
         this.displayTodos();
     },
+    // method to change certain todo item on object
     changeTodo: function(position, newValue){
         this.todos[position] = newValue;
         this.displayTodos();
+    },
+    // method to delete todo item on this object
+    deleteTodo: function(position){
+        this.todos.splice(position, 1);
+        this.displayTodos();
     }
-
 };
 
 
 
-// function to change sertain todo item
-function changeTodo(position, newValue){
-    todos[position] = newValue;
-    displayTodos();
-}
-// function to delete todo item
-function deleteTodo(position){
-    todos.splice(position, 1);
-    displayTodos();
-}
+
+
