@@ -15,6 +15,7 @@ function displayTodos(){
 
 function addTodo(newTodo){
     todos.push(newTodo);
+    displayTodos();
 }
-displayTodos();
+
 addTodo('new todo');
