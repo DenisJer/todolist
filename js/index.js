@@ -13,18 +13,20 @@ var todoList = {
     displayTodos: function(){
         console.log(this.todos);
     },
+    // method to add new todo item to this object
     addTodo: function(newTodo){
         this.todos.push(newTodo);
         this.displayTodos();
+    },
+    changeTodo: function(position, newValue){
+        this.todos[position] = newValue;
+        this.displayTodos();
     }
+
 };
 
 
-// function to add new todo item
-function addTodo(newTodo){
-    todos.push(newTodo);
-    displayTodos();
-}
+
 // function to change sertain todo item
 function changeTodo(position, newValue){
     todos[position] = newValue;
