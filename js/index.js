@@ -13,9 +13,12 @@ var todoList = {
     displayTodos: function(){
         console.log(this.todos);
     },
-    // method to add new todo item to this object
-    addTodo: function(newTodo){
-        this.todos.push(newTodo);
+    // method to add new todo as an object
+    addTodo: function(todoText){
+        this.todos.push({
+            todoText: todoText,
+            completed: false
+        });
         this.displayTodos();
     },
     // method to change certain todo item on object
@@ -29,6 +32,7 @@ var todoList = {
         this.displayTodos();
     }
 };
+todoList.addTodo('this is an object');
 
 
 
