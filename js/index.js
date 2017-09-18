@@ -1,6 +1,6 @@
 // it should have a function store todos
 // it should have a function display todos +
-// it should have a function add todos
+// it should have a function add todos +
 // it should have a function delete todos
 // it should have a function edit todos
 
@@ -18,4 +18,11 @@ function addTodo(newTodo){
     displayTodos();
 }
 
+function changeTodo(position, newValue){
+    todos[position] = newValue;
+    displayTodos();
+}
 addTodo('new todo');
+
+changeTodo(0, "changed todo");
+changeTodo(0, "changed todo again");
