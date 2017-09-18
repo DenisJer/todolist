@@ -1,11 +1,11 @@
-// it should  store todos array on object +
-// it should have a displayTodos method+
-// it should have a addTodo method+
-// it should have a changeTodo method
-// it should have a deleteTodo method
+// v3
+
+// todoList.addTodo should add objects
+// todoList.changeTodo should change the todoText property
+// todoList.toggleCompleted dhould change the completed property
 
 
-// v2
+
 
 var todoList = {
     todos: [],
