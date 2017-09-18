@@ -1,4 +1,15 @@
-// it should store todos
-// it should add todos
-// it should delete todos
-// it should edit todos
+// it should have a function store todos
+// it should have a function display todos
+// it should have a function add todos
+// it should have a function delete todos
+// it should have a function edit todos
+
+
+// v1
+
+var todos = [];
+
+function displayTodos(){
+    console.log('My todos: ', todos);
+}
+displayTodos();
