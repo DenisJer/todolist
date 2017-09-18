@@ -22,7 +22,8 @@ function changeTodo(position, newValue){
     todos[position] = newValue;
     displayTodos();
 }
-addTodo('new todo');
 
-changeTodo(0, "changed todo");
-changeTodo(0, "changed todo again");
+function deleteTodo(position){
+    todos.splice(position, 1);
+    displayTodos();
+}
