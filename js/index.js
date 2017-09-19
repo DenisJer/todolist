@@ -61,10 +61,15 @@ var todoList = {
                 completedTodos++;
             }
         }
-        //if everythin's true, make everything false
+        // case 1: if everythin's true, make everything false
         if(completedTodos === totalTodos){
             for(var a = 0; a < totalTodos; a++){
                 this.todos[a].completed = false;
+            }
+        // case 2:  otherwise, make everything true
+        }else{
+            for(var b = 0; b < totalTodos; b++){
+                this.todos[b].completed = true;
             }
         }
         this.displayTodos();
