@@ -11,6 +11,7 @@ var todoList = {
     todos: [],
     // method to display todo items in this object
     displayTodos: function(){
+       
         // check if todo list is empty
         if(this.todos.length === 0 || this.todos === undefined){
             console.log('Your todo list is empty');
@@ -29,6 +30,7 @@ var todoList = {
     },
     // method to add new todo as an object
     addTodo: function(todoText){
+       
         this.todos.push({
             todoText: todoText,
             completed: false
@@ -52,6 +54,7 @@ var todoList = {
         this.displayTodos();
     },
     toggleAll: function(){
+       
         var totalTodos = this.todos.length;
         var completedTodos = 0;
 
@@ -76,18 +79,14 @@ var todoList = {
     }
 };
 
-// button variables
-var displayTodosButton = document.getElementById('displayTodosButton');
-var toggleAllButton = document.getElementById('toggleAllButton');
-
-// adding event listener on buttons to display todos and toggle all 
-displayTodosButton.addEventListener('click', function(){
-    todoList.displayTodos();
-});
-
-toggleAllButton.addEventListener('click', function(){
-    todoList.toggleAll();
-});
 
 
-
+// object to handle events on button clicks
+var handlers = {
+    displayTodos: function(){
+        todoList.displayTodos();
+    },
+    toggleAll:function(){
+        todoList.toggleAll();
+    }
+};
