@@ -88,5 +88,10 @@ var handlers = {
     },
     toggleAll:function(){
         todoList.toggleAll();
+    },
+    addTodo:function(){
+        var addTodoTextInput = document.getElementById('addTodoText');
+        todoList.addTodo(addTodoTextInput.value);
+        addTodoTextInput.value = '';
     }
 };

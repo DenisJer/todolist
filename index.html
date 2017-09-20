@@ -11,10 +11,16 @@
     
     <h1>Todo list app</h1>
 
-    
-    <button type="button" onclick="handlers.displayTodos()">Display todos</button>
-    <button type="button" onclick="handlers.toggleAll()">Toggle all</button>
-
+    <div>
+        <button type="button" onclick="handlers.displayTodos()">Display todos</button>
+        <button type="button" onclick="handlers.toggleAll()">Toggle all</button>
+    </div>
+   
+    <div>
+        <button onclick="handlers.addTodo()">Add todo</button>
+        <input type="text" id="addTodoText">
+    </div>
+       
     <script src="js/index.js"></script>  
 </body>
 </html>
