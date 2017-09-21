@@ -91,16 +91,26 @@ var handlers = {
     },
     addTodo:function(){
         var addTodoTextInput = document.getElementById('addTodoText');
+        
         todoList.addTodo(addTodoTextInput.value);
+        
         addTodoTextInput.value = '';
     },
     changeTodo:function(){
         var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
         var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+        
         todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
         
         changeTodoPositionInput = '';
         changeTodoTextInput = '';
 
+    },
+    deleteTodo:function(){
+        var deleteTodoNumberInput = document.getElementById('deleteTodoNumberInput');
+       
+        todoList.deleteTodo(deleteTodoNumberInput.valueAsNumber);
+
+        deleteTodoNumberInput = '';
     }
 };
