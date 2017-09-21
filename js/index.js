@@ -121,3 +121,16 @@ var handlers = {
         todoList.toggleAll();
     }
 };
+
+var view = {
+    displayTodos: function(){
+        var todosUl = document.querySelector('ul');
+        todosUl.innerHtml = '';
+        for(var c = 0; c < todoList.todos.length; c++){
+          
+            var todoLi = document.createElement('li');
+            todoLi.textContent = todoList.todos[c].todoText;
+            todosUl.appendChild(todoLi);
+        }
+    }
+};
