@@ -125,8 +125,29 @@ var view = {
                 todoTextWithCompletion = '( ) ' + todo.todoText;
             }
             
-            todoLi.textContent = todoTextWithCompletion;    
+            // todoLi.id = Math.round(Math.random() * 100);
+            todoLi.id = c;
+            todoLi.textContent = todoTextWithCompletion;  
+            todoLi.appendChild(this.createDelteButton());
             todosUl.appendChild(todoLi);
         }
+    },
+    createDelteButton:function(){
+        var deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = 'deleteButton';
+
+        return deleteButton;
     }
 };
+
+
+// students = ['denis', 'auste', 'dominykas'];
+// function logName(name){
+//     console.log(name);
+// }
+// // students.forEach(logName);
+// students.forEach(function(element) {
+ 
+//     console.log(element + ' mokiniai!');
+// }, this);
