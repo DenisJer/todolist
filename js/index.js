@@ -41,22 +41,45 @@ var todoList = {
         var completedTodos = 0;
 
         // get  number of completed todos
-        for(var i = 0; i < totalTodos; i++){
-            if (this.todos[i].completed === true){
-                completedTodos++;
+        // for(var i = 0; i < totalTodos; i++){
+        //     if (this.todos[i].completed === true){
+        //         completedTodos++;
+        //     }
+        // }
+        this.todos.forEach(function(todo){
+            if(todo.completed === true){
+                completedToos++;
             }
-        }
-        // case 1: if everythin's true, make everything false
-        if(completedTodos === totalTodos){
-            for(var a = 0; a < totalTodos; a++){
-                this.todos[a].completed = false;
-            }
-        // case 2:  otherwise, make everything true
-        }else{
-            for(var b = 0; b < totalTodos; b++){
-                this.todos[b].completed = true;
-            }
-        }
+        });
+        // // case 1: if everythin's true, make everything false
+        // if(completedTodos === totalTodos){
+        //     // for(var a = 0; a < totalTodos; a++){
+        //     //     this.todos[a].completed = false;
+        //     // }
+
+        //     this.todos.forEach(function(todo){
+        //         todo.completed = false;
+        //     });
+        // // case 2:  otherwise, make everything true
+        // }else{
+        //     // for(var b = 0; b < totalTodos; b++){
+        //     //     this.todos[b].completed = true;
+        //     // }
+
+        //     this.todos.forEach(function(todo){
+        //         todo.completed = true;
+        //     });
+
+        // }
+        this.todos.forEach(function(todo){
+            // case 1: if everythin's true, make everything false
+                if(completedTodos === totalTodos){
+                    todo.completed = false;
+                    // case 2:  otherwise, make everything true
+                } else {
+                 todo.completed = true;
+                }
+        });
         
     }
 };
@@ -144,7 +167,7 @@ var view = {
         
             if (elementClicked.className === 'deleteButton'){
                 // run handlers.delteTodo
-                handlers.deleteTodo( parseInt(elementClicked.parentNode.id));
+                handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
             }
         });
     }
