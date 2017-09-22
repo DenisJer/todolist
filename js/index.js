@@ -84,13 +84,9 @@ var handlers = {
 
         view.displayTodos();
     },
-    deleteTodo:function(){
-        var deleteTodoNumberInput = document.getElementById('deleteTodoNumberInput');
-       
-        todoList.deleteTodo(deleteTodoNumberInput.valueAsNumber);
-
-        deleteTodoNumberInput = '';
-
+    deleteTodo:function(position){
+    
+        todoList.deleteTodo(position);
         view.displayTodos();
     },
     toggleCompleted: function(){
@@ -138,9 +134,22 @@ var view = {
         deleteButton.className = 'deleteButton';
 
         return deleteButton;
+    },
+    setUpEventListeners: function(){
+        var todosUl = document.querySelector('ul');
+        todosUl.addEventListener('click', function(event){
+          
+            // get the element that was clicked on.
+            var elementClicked = event.target;
+        
+            if (elementClicked.className === 'deleteButton'){
+                // run handlers.delteTodo
+                handlers.deleteTodo( parseInt(elementClicked.parentNode.id));
+            }
+        });
     }
 };
-
+view.setUpEventListeners();
 
 // students = ['denis', 'auste', 'dominykas'];
 // function logName(name){
