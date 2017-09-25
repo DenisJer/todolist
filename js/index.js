@@ -48,7 +48,7 @@ var todoList = {
         // }
         this.todos.forEach(function(todo){
             if(todo.completed === true){
-                completedToos++;
+                completedTodos++;
             }
         });
         // // case 1: if everythin's true, make everything false
