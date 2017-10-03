@@ -132,26 +132,40 @@ var view = {
     displayTodos: function(){
         var todosUl = document.querySelector('ul');
         todosUl.innerHTML = '';
-        for(var c = 0; c < todoList.todos.length; c++){
+        // for(var c = 0; c < todoList.todos.length; c++){
           
-            var todoLi = document.createElement('li');
-            var todo = todoList.todos[c];
-            var todoTextWithCompletion = '';
+        //     var todoLi = document.createElement('li');
+        //     var todo = todoList.todos[c];
+        //     var todoTextWithCompletion = '';
 
+        //     if (todo.completed === true ) {
+        //         todoTextWithCompletion = '(x) ' + todo.todoText;
+        //     } else {
+        //         todoTextWithCompletion = '( ) ' + todo.todoText;
+        //     }
+            
+        //     // todoLi.id = Math.round(Math.random() * 100);
+        //     todoLi.id = c;
+        //     todoLi.textContent = todoTextWithCompletion;  
+        //     todoLi.appendChild(this.createDelteButton());
+        //     todosUl.appendChild(todoLi);
+        // }
+        todoList.todos.forEach(function(todo, position){
+            var todoLi = document.createElement('li');
+            var todoTextWithCompletion = '';
             if (todo.completed === true ) {
                 todoTextWithCompletion = '(x) ' + todo.todoText;
             } else {
                 todoTextWithCompletion = '( ) ' + todo.todoText;
             }
-            
-            // todoLi.id = Math.round(Math.random() * 100);
-            todoLi.id = c;
+            todoLi.id = position;
             todoLi.textContent = todoTextWithCompletion;  
-            todoLi.appendChild(this.createDelteButton());
-            todosUl.appendChild(todoLi);
-        }
+            debugger;
+                todoLi.appendChild(this.createDeleteButton());
+                todosUl.appendChild(todoLi);
+        }, this);
     },
-    createDelteButton:function(){
+    createDeleteButton:function(){
         var deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.className = 'deleteButton';
